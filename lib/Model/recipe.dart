@@ -1,55 +1,73 @@
 import 'ingredient.dart';
- 
+
 class Recipe {
-  final String imgUrl;
-  final String imgLabel;
-  final String description;
-  final List<Ingredient> ingredients;
- 
-  Recipe(this.imgUrl, this.imgLabel, this.description, this.ingredients);
+  String imgLabel;
+  String imgUrl;
+  String description;
+  List<Ingredient> ingredients = [];
+
+
+  Recipe(
+    this.imgLabel,
+    this.imgUrl,
+    this.description,
+    this.ingredients,
+  );
+
   static List<Recipe> samples = [
     Recipe(
-      'assets/images/Thai green fish curry.webp',
-      'Aubergine Thai Jungle Curry',
-      'A spicy Thai jungle curry made with aubergine, herbs, and aromatic spices. '
-          'It features a light broth with strong flavors and no coconut milk.',
+      'Aubergine Thai jungle curry',
+      'assets/images/aubergine.jpg',
+      'This aubergine Thai jungle curry is low-calorie and ready in just 20 minutes, making a great, satisfying option for midweek.',
       [
-        Ingredient(name: 'Aubergines', quantity: 2, unit: ''),
+        Ingredient(name: 'Aubergine', quantity: 2, unit: ''),
         Ingredient(name: 'Jungle curry paste', quantity: 2, unit: 'tbsp'),
         Ingredient(name: 'Vegetable stock', quantity: 2, unit: 'cups'),
-        Ingredient(name: 'Kaffir lime leaves', quantity: 3, unit: ''),
-        Ingredient(name: 'Thai chilies', quantity: 2, unit: ''),
-        Ingredient(name: 'Fish sauce', quantity: 1, unit: 'tbsp'),
         Ingredient(name: 'Thai basil', quantity: 1, unit: 'handful'),
       ],
     ),
- 
     Recipe(
-      'assets/images/Thai pumpkin curry.webp',
-      'Thai Pumpkin Curry',
-      'A creamy and mildly spiced Thai curry made with pumpkin, coconut milk, '
-          'and aromatic Thai spices.',
+      'Crying tiger beef salad',
+      'assets/images/crying_tiger.jpg',
+      'Enjoy the bold, spicy and tangy flavours of crying tiger beef salad, a Thai special-occasion dish.',
       [
-        Ingredient(name: 'Pumpkin', quantity: 300, unit: 'g'),
-        Ingredient(name: 'Red curry paste', quantity: 2, unit: 'tbsp'),
+        Ingredient(name: 'Beef sirloin', quantity: 200, unit: 'g'),
+        Ingredient(name: 'Lettuce', quantity: 1, unit: 'cup'),
+        Ingredient(name: 'Chilli', quantity: 2, unit: ''),
+        Ingredient(name: 'Lime juice', quantity: 2, unit: 'tbsp'),
+      ],
+    ),
+    Recipe(
+      'Jackfruit massaman curry',
+      'assets/images/jackfruit.jpg',
+      'A tin of jackfruit is the magic ingredient in this vegan massaman curry, served with salted peanuts.',
+      [
+        Ingredient(name: 'Jackfruit', quantity: 1, unit: 'can'),
+        Ingredient(name: 'Massaman curry paste', quantity: 2, unit: 'tbsp'),
         Ingredient(name: 'Coconut milk', quantity: 1, unit: 'cup'),
-        Ingredient(name: 'Palm sugar', quantity: 1, unit: 'tbsp'),
+        Ingredient(name: 'Peanuts', quantity: 2, unit: 'tbsp'),
+      ],
+    ),
+    Recipe(
+      'Larb muang (Thai chopped pork salad)',
+      'assets/images/larb.jpg',
+      'Experience bold Thai flavours with Larb Muang, a vibrant chopped pork salad bursting with spices.',
+      [
+        Ingredient(name: 'Minced pork', quantity: 200, unit: 'g'),
+        Ingredient(name: 'Shallots', quantity: 2, unit: ''),
+        Ingredient(name: 'Chilli flakes', quantity: 1, unit: 'tbsp'),
         Ingredient(name: 'Fish sauce', quantity: 1, unit: 'tbsp'),
       ],
     ),
- 
     Recipe(
-      'assets/images/Pad Thai.webp',
       'Pad Thai',
-      'A classic Thai stir-fried noodle dish with a balance of sweet, sour, '
-          'and savory flavors.',
+      'assets/images/pad_thai.jpg',
+      'Put juicy king prawns to work in our version of this classic Thai dish, full of vibrant flavours and ready in half an hour.',
       [
         Ingredient(name: 'Rice noodles', quantity: 200, unit: 'g'),
+        Ingredient(name: 'Prawns', quantity: 50, unit: 'g'),
         Ingredient(name: 'Eggs', quantity: 2, unit: ''),
-        Ingredient(name: 'Tofu', quantity: 100, unit: 'g'),
-        Ingredient(name: 'Bean sprouts', quantity: 100, unit: 'g'),
-        Ingredient(name: 'Pad Thai sauce', quantity: 3, unit: 'tbsp'),
-        Ingredient(name: 'Peanuts', quantity: 2, unit: 'tbsp'),
+        Ingredient(name: 'Bean sprouts', quantity: 1, unit: 'cup'),
       ],
     ),
   ];
